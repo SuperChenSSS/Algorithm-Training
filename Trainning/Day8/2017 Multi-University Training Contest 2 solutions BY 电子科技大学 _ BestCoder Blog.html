@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!-- saved from url=(0142)http://bestcoder.hdu.edu.cn/blog/2017-multi-university-training-contest-2-solutions-by-%e7%94%b5%e5%ad%90%e7%a7%91%e6%8a%80%e5%a4%a7%e5%ad%a6/ -->
+<html lang="zh-CN"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width">
+<title>2017 Multi-University Training Contest 2 solutions BY 电子科技大学 | BestCoder Blog</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://bestcoder.hdu.edu.cn/blog/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://bestcoder.hdu.edu.cn/blog/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="alternate" type="application/rss+xml" title="BestCoder Blog » Feed" href="http://bestcoder.hdu.edu.cn/blog/feed/">
+<link rel="alternate" type="application/rss+xml" title="BestCoder Blog » 评论Feed" href="http://bestcoder.hdu.edu.cn/blog/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="BestCoder Blog » 2017 Multi-University Training Contest 2 solutions BY 电子科技大学评论Feed" href="http://bestcoder.hdu.edu.cn/blog/2017-multi-university-training-contest-2-solutions-by-%e7%94%b5%e5%ad%90%e7%a7%91%e6%8a%80%e5%a4%a7%e5%ad%a6/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/bestcoder.hdu.edu.cn\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.4"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="twentytwelve-style-css" href="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/style.css" type="text/css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://bestcoder.hdu.edu.cn/blog/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/jquery.js"></script>
+<script type="text/javascript" src="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/jquery-migrate.min.js"></script>
+<link rel="https://api.w.org/" href="http://bestcoder.hdu.edu.cn/blog/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bestcoder.hdu.edu.cn/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://bestcoder.hdu.edu.cn/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="2017 Multi-University Training Contest 1 solutions BY 北京航空航天大学" href="http://bestcoder.hdu.edu.cn/blog/2017-multi-university-training-contest-8-solutions-by-%e5%8c%97%e4%ba%ac%e8%88%aa%e7%a9%ba%e8%88%aa%e5%a4%a9%e5%a4%a7%e5%ad%a6/">
+<meta name="generator" content="WordPress 4.5.4">
+<link rel="canonical" href="http://bestcoder.hdu.edu.cn/blog/2017-multi-university-training-contest-2-solutions-by-%e7%94%b5%e5%ad%90%e7%a7%91%e6%8a%80%e5%a4%a7%e5%ad%a6/">
+<link rel="shortlink" href="http://bestcoder.hdu.edu.cn/blog/?p=520">
+<link rel="alternate" type="application/json+oembed" href="http://bestcoder.hdu.edu.cn/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fbestcoder.hdu.edu.cn%2Fblog%2F2017-multi-university-training-contest-2-solutions-by-%25e7%2594%25b5%25e5%25ad%2590%25e7%25a7%2591%25e6%258a%2580%25e5%25a4%25a7%25e5%25ad%25a6%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://bestcoder.hdu.edu.cn/blog/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fbestcoder.hdu.edu.cn%2Fblog%2F2017-multi-university-training-contest-2-solutions-by-%25e7%2594%25b5%25e5%25ad%2590%25e7%25a7%2591%25e6%258a%2580%25e5%25a4%25a7%25e5%25ad%25a6%2F&amp;format=xml">
+<link rel="icon" href="http://bestcoder.hdu.edu.cn/blog/wp-content/uploads/2015/08/cropped-logo-32x32.png" sizes="32x32">
+<link rel="icon" href="http://bestcoder.hdu.edu.cn/blog/wp-content/uploads/2015/08/cropped-logo-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="http://bestcoder.hdu.edu.cn/blog/wp-content/uploads/2015/08/cropped-logo-180x180.png">
+<meta name="msapplication-TileImage" content="http://bestcoder.hdu.edu.cn/blog/wp-content/uploads/2015/08/cropped-logo-270x270.png">
+<link rel="stylesheet" href="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/katex.min.css">
+</head>
+
+<body class="single single-post postid-520 single-format-standard">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="http://bestcoder.hdu.edu.cn/blog/" title="BestCoder Blog" rel="home">BestCoder Blog</a></h1>
+			<h2 class="site-description">BestCoder 官方博客</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">菜单</button>
+			<a class="assistive-text" href="http://bestcoder.hdu.edu.cn/blog/2017-multi-university-training-contest-2-solutions-by-%e7%94%b5%e5%ad%90%e7%a7%91%e6%8a%80%e5%a4%a7%e5%ad%a6/#content" title="跳至内容">跳至内容</a>
+			<div class="menu-%e9%a1%b6%e9%83%a8%e5%af%bc%e8%88%aa%e6%9d%a1-container"><ul id="menu-%e9%a1%b6%e9%83%a8%e5%af%bc%e8%88%aa%e6%9d%a1" class="nav-menu"><li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-13"><a href="http://bestcoder.hdu.edu.cn/blog/">首页</a></li>
+<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="http://bestcoder.hdu.edu.cn/">BestCoder</a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a href="http://acm.hdu.edu.cn/">HDOJ</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-520" class="post-520 post type-post status-publish format-standard hentry category-uncategorized">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">2017 Multi-University Training Contest 2 solutions BY 电子科技大学</h1>
+										<div class="comments-link">
+					<a href="http://bestcoder.hdu.edu.cn/blog/2017-multi-university-training-contest-2-solutions-by-%e7%94%b5%e5%ad%90%e7%a7%91%e6%8a%80%e5%a4%a7%e5%ad%a6/#respond"><span class="leave-reply">发表回复</span></a>				</div><!-- .comments-link -->
+					</header><!-- .entry-header -->
+
+				<div class="entry-content markdown marked"><p></p><h2>1001：</h2>
+无<p></p>
+<p></p><h2>1002：</h2>
+本题要求在1e6*1e6的矩形内找到一个特定的1e3*1e3的小矩形。
+可以选择每隔K行或K列选出一个长宽皆为L的小矩形作为识别矩形，当识别矩形出现在输入矩形时，再进行完全匹配。根据鸽笼原理，当K+2*L&lt;=1000时，输入矩形一定覆盖了至少一个识别矩形。这里选择L=7使得可以用一个int表示一个识别矩形。将hash结果视为随机的，则识别矩形匹配成功进入完全匹配的次数约为(1e6/k)^2*(1e3)^2/2^49，为极小值。<p></p>
+<p></p><h2>1003：</h2>
+预处理：a_i -= i ，易证明从最小的b开始选每次选最大的一定可以使结果最大。
+证明思路：如果条件改为a_i&lt;=max{a_j-j|b_k&lt;=j&lt;=n}，那么b的顺序与最后的结果无关。条件改回来后，由于每次要计算一个数的最大值时都有a_(n+1)...a_(i-1)在范围中，所以每次只需让a_i - i尽可能大，那么就把大的数尽早用上，每次一定考虑尽量多的数字，这样取得的数字就尽可能的大。
+所以说每次就是求区间最值，加在答案上。由于贪心的思路，每次要求的区间的下界是单调不降的，故可以用单调队列优化到O(n)的复杂度。
+由于1 ≤ b_i ≤ n，对b排序可以用哈希排序（桶排序）完成。<p></p>
+<p>进一步观察，可以发现这样贪心时 a_(n+1)...a_i 其实是单调不增的，所以并不需要每次求区间最值了，选第一个数时就选最大的，后面的选择顺序与最终结果无关了。</p>
+<p></p><h2>1004：</h2>
+性质1：数列的相邻互换将改变逆序对数的奇偶性。<p></p>
+<p>证明1：易得。</p>
+<p>性质2：去掉空格，剩余的木板从左到右从上到下看做数列，【操作】不改变数列逆序对的奇偶性。</p>
+<p>证明2：左右移动：生成数列不改变，逆序对不变；上下移动：相当于移动的木板向前或向后进行m-1次相邻互换，但是空格最终要回到右下角，总的上下移动为偶数，所以总的相邻互换为偶数，由性质1可得证。</p>
+<p>性质3:所有局面都可通过一定的操作得到如下局面：</p>
+<p>以4*7为例</p>
+<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><table>
+<tbody>
+<tr>
+<td width="37">1</td>
+<td width="38">2</td>
+<td width="37">3</td>
+<td width="38">4</td>
+<td width="37">5</td>
+<td width="38">6</td>
+<td width="37">7</td>
+</tr>
+<tr>
+<td width="37">8</td>
+<td width="38">9</td>
+<td width="37">10</td>
+<td width="38">11</td>
+<td width="37">12</td>
+<td width="38">13</td>
+<td width="37">14</td>
+</tr>
+<tr>
+<td width="37">15</td>
+<td width="38">16</td>
+<td width="37">17</td>
+<td width="38">18</td>
+<td width="37">19</td>
+<td width="38">X</td>
+<td width="37">X</td>
+</tr>
+<tr>
+<td width="37">22</td>
+<td width="38">23</td>
+<td width="37">24</td>
+<td width="38">25</td>
+<td width="37">26</td>
+<td width="38">X</td>
+<td width="37">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+证明3：<p></p>
+<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><table>
+<tbody>
+<tr>
+<td width="37">a</td>
+<td width="38">b</td>
+</tr>
+<tr>
+<td width="37">X</td>
+<td width="38">X</td>
+</tr>
+<tr>
+<td width="37">X</td>
+<td width="38">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+可以证明任意初始2*3局面，无论a、b初始在哪都可以通过一定操作使其位置如图所示。<p></p>
+<p>证明脑补即可。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>推广到任意局面：只需按顺序把数字当做a、b进行类似搬动，可保证性质3成立。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>由以上性质，考虑完成性质3局面后右下角三个数字等价于2*2局面。</p>
+<p>枚举所有6种2*2局面发现：相同逆序对奇偶性的局面可以互相到达。</p>
+<p>所以只需考虑原排列的逆序对数的奇偶性:偶的“YES”，奇的“NO”；</p>
+<p>&nbsp;</p>
+<p>按题意生成原始排列，观察发现，每一轮数后方比该数小的数的数量（即对逆序对数的贡献）呈等差数列形式，公差p-1，项数为（num-1）/p+1，照此简化计算，不需要正真求出排列。</p>
+<p></p><h2>1005：</h2>
+这题由于n变为了3000，因此需要对两处都进行优化，预处理和暴力枚举的区间都要进行优化。预处理的时候会发现其实有很多无用状态，我们可以用la数组来防止这种现象的发生。这样就做到n^2的了。暴力枚举的时候你需要进行枚举两段就行了。这里有个细节就是你枚举删除的第一段的时候和最后一段留下的是要求连接在一起，因此这样会减去很多种无用情况，复杂度最坏情况只有n^2。<p></p>
+<p></p><h2>1006：</h2>
+对于任意i&gt;=1，当j&gt;=3时，有<p></p>
+<p><a href="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/1.png"><img class="alignnone size-full wp-image-521" src="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/1.png" alt="1" width="178" height="28"></a></p>
+<p>通过归纳法可以得到</p>
+<p><a href="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/2.png"><img class="alignnone size-full wp-image-522" src="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/2.png" alt="2" width="295" height="51"></a></p>
+<p>进而推导出</p>
+<p><a href="http://bestcoder.hdu.edu.cn/blog/wp-content/uploads/2017/07/3.png"><img class="alignnone size-medium wp-image-523" src="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/3-300x144.png" alt="3" width="300" height="144"></a></p>
+<p>通过矩阵快速幂求解</p>
+<p></p><h2>1007：</h2>
+首先，我们统计出Derek和Alfia答案相同的题目数量k1和答案不同的题目数量k2.<p></p>
+<p>对于两人答案相同的题目，共有以下两种情况：</p>
+<p></p><ul>
+     <li>两人都对</li>
+</ul>
+b.两人都错<p></p>
+<p>对于两人答案不同的题目，共有以下三种情况：</p>
+<p>c.Derek对Alfia错</p>
+<p>d.Alfia对Derek错</p>
+<p>e.两人都错</p>
+<p>于是我们可以列出一些方程：</p>
+<p>k1+k2=n</p>
+<p>a+b=k1</p>
+<p>c+d+e=k2</p>
+<p>a+c=x</p>
+<p>a+d=y</p>
+<p>又a,b,c,d,e均为非负整数，且满足a,b&lt;=k1;c,d,e&lt;=k2</p>
+<p>将a,b,d,e全部用c替换后需要同时满足以下四个条件：</p>
+<p>0&lt;=c&lt;=k2</p>
+<p>x-y&lt;=c&lt;=k2+x-y</p>
+<p>(x-y)/2&lt;=c&lt;=(k2+x-y)/2</p>
+<p>x-k1&lt;=c&lt;=x</p>
+<p>我们只需要判断这四段区间存不存在公共的整数点，如果存在，则说明Derek没有说谎；如果不存在，则说明Derek在说谎。</p>
+<p></p><h2>1008：</h2>
+每种数可以单独算出其期望然后相加
+对于数量小于13的数，可以用容斥的方式来做
+对于大于13的数，可以求出全不含的矩阵个数，然后用全部矩阵减去这部分
+复杂度 o(n^4/13*T)<p></p>
+<p></p><h2>1009:</h2>
+无<p></p>
+<p></p><h2>1010:</h2>
+把T接在S后面，用后缀自动机构造出后缀树，求出他的dfs序（等同于后缀数组）。
+这样之后，用树上倍增就可以找到T[a,b]所在的节点。
+由于一颗子树在dfs序上是一段区间，我们就可以顺势求出那个节点的dfs所在区间。
+我们知道在树上每个节点的right集是它子节点right集的并，我们知道这个节点的Right集是dfs序上的一段区间。
+由于我们要求sum{f[yi]}，可以直接把right赋值为f[right],最后我们要求的就是这段区间right集中c&lt;=right&lt;=d的权值和sum{f[yi]}。
+对于这个问题，由于有在线修改操作不能直接主席树完成。我们可以直接树状数组套权值线段树完成，或者常数更小的静态主席树+树状数组套权值线段树，或者树状数组套平衡树，时空复杂度nlognlogn。<p></p>
+<p></p><h2>1011:</h2>
+题意，二维平面上给N个整数点，问能构成多少个不同的正多边形。<p></p>
+<p>题解：容易得知只有正四边形可以使得所有的顶点为整数点。（具体证明可参考杨景钦在2017的国家队论文）
+所以正解即求出所有的正四边形个数。</p>
+<p>枚举2个点，然后暴力判断另外2个点的位置是否存在。</p>
+<p>复杂度 N*N*logN。</p>
+</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			本条目发布于<a href="http://bestcoder.hdu.edu.cn/blog/2017-multi-university-training-contest-2-solutions-by-%e7%94%b5%e5%ad%90%e7%a7%91%e6%8a%80%e5%a4%a7%e5%ad%a6/" title="17:00" rel="bookmark"><time class="entry-date" datetime="2017-07-27T17:00:07+00:00">2017年7月27日</time></a>。属于<a href="http://bestcoder.hdu.edu.cn/blog/category/uncategorized/" rel="category tag">未分类</a>分类。<span class="by-author">作者是<span class="author vcard"><a class="url fn n" href="http://bestcoder.hdu.edu.cn/blog/author/sensible/" title="查看所有由sensible发布的文章" rel="author">sensible</a></span>。</span>								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">文章导航</h3>
+					<span class="nav-previous"><a href="http://bestcoder.hdu.edu.cn/blog/2017-multi-university-training-contest-8-solutions-by-%e5%8c%97%e4%ba%ac%e8%88%aa%e7%a9%ba%e8%88%aa%e5%a4%a9%e5%a4%a7%e5%ad%a6/" rel="prev"><span class="meta-nav">←</span> 2017 Multi-University Training Contest 1 solutions BY 北京航空航天大学</a></span>
+					<span class="nav-next"></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+					<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">发表评论 <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://bestcoder.hdu.edu.cn/blog/2017-multi-university-training-contest-2-solutions-by-%e7%94%b5%e5%ad%90%e7%a7%91%e6%8a%80%e5%a4%a7%e5%ad%a6/#respond" style="display:none;">取消回复</a></small></h3>				<form action="http://bestcoder.hdu.edu.cn/blog/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+					<p class="comment-notes"><span id="email-notes">电子邮件地址不会被公开。</span> 必填项已用<span class="required">*</span>标注</p><p class="comment-form-comment"><label for="comment">评论</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">姓名 <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required="true" required="required"></p>
+<p class="comment-form-email"><label for="email">电子邮件 <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required="true" required="required"></p>
+<p class="comment-form-url"><label for="url">站点</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="发表评论"> <input type="hidden" name="comment_post_ID" value="520" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="ce0d2e436c"></p><p style="display: none;"></p>				<input type="hidden" id="ak_js" name="ak_js" value="1501156031995"></form>
+					</div><!-- #respond -->
+		
+</div><!-- #comments .comments-area -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://bestcoder.hdu.edu.cn/blog/">
+				<div>
+					<label class="screen-reader-text" for="s">搜索：</label>
+					<input type="text" value="" name="s" id="s">
+					<input type="submit" id="searchsubmit" value="搜索">
+				</div>
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">近期文章</h3>		<ul>
+					<li>
+				<a href="http://bestcoder.hdu.edu.cn/blog/2017-multi-university-training-contest-2-solutions-by-%e7%94%b5%e5%ad%90%e7%a7%91%e6%8a%80%e5%a4%a7%e5%ad%a6/">2017 Multi-University Training Contest 2 solutions BY 电子科技大学</a>
+						</li>
+					<li>
+				<a href="http://bestcoder.hdu.edu.cn/blog/2017-multi-university-training-contest-8-solutions-by-%e5%8c%97%e4%ba%ac%e8%88%aa%e7%a9%ba%e8%88%aa%e5%a4%a9%e5%a4%a7%e5%ad%a6/">2017 Multi-University Training Contest 1 solutions BY 北京航空航天大学</a>
+						</li>
+					<li>
+				<a href="http://bestcoder.hdu.edu.cn/blog/2016-multi-university-training-contest-9-solutions-by-%e9%87%91%e7%ad%96%e5%b7%a5%e4%b8%9a%e7%bb%bc%e5%90%88%e5%a4%a7%e5%ad%a6/">2016 Multi-University Training Contest 9 solutions BY 金策工业综合大学</a>
+						</li>
+					<li>
+				<a href="http://bestcoder.hdu.edu.cn/blog/2016-multi-university-training-contest-8-solutions-by-%e5%ad%a6%e5%86%9b%e4%b8%ad%e5%ad%a6/">2016 Multi-University Training Contest 8 solutions BY 学军中学</a>
+						</li>
+					<li>
+				<a href="http://bestcoder.hdu.edu.cn/blog/2016-multi-university-training-contest-7-solutions-by-sysu/">2016 Multi-University Training Contest 7 solutions BY SYSU</a>
+						</li>
+				</ul>
+		</aside>		<aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">分类目录</h3>		<ul>
+	<li class="cat-item cat-item-7"><a href="http://bestcoder.hdu.edu.cn/blog/category/acmicpc-asia-regional-%e7%bd%91%e8%b5%9b%e9%a2%98%e8%a7%a3/">ACM/ICPC Asia Regional 网赛题解</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://bestcoder.hdu.edu.cn/blog/category/duoxiao/">多校题解</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://bestcoder.hdu.edu.cn/blog/category/uncategorized/">未分类</a>
+</li>
+		</ul>
+</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="https://cn.wordpress.org/" title="优雅的个人发布平台">自豪地采用WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+<script src="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/marked.min.js"></script>
+<script src="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/katex.min.js"></script>
+<script src="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/auto-render.min.js"></script>
+<script src="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/wordpress.js"></script>
+<script type="text/javascript" src="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/form.js"></script>
+<script type="text/javascript" src="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/navigation.js"></script>
+<script type="text/javascript" src="./2017 Multi-University Training Contest 2 solutions BY 电子科技大学 _ BestCoder Blog_files/wp-embed.min.js"></script>
+
+<audio controls="controls" style="display: none;"></audio></body><style type="text/css">#yddContainer{display:block;font-family:Microsoft YaHei;position:relative;width:100%;height:100%;top:-4px;left:-4px;font-size:12px;border:1px solid}#yddTop{display:block;height:22px}#yddTopBorderlr{display:block;position:static;height:17px;padding:2px 28px;line-height:17px;font-size:12px;color:#5079bb;font-weight:bold;border-style:none solid;border-width:1px}#yddTopBorderlr .ydd-sp{position:absolute;top:2px;height:0;overflow:hidden}.ydd-icon{left:5px;width:17px;padding:0px 0px 0px 0px;padding-top:17px;background-position:-16px -44px}.ydd-close{right:5px;width:16px;padding-top:16px;background-position:left -44px}#yddKeyTitle{float:left;text-decoration:none}#yddMiddle{display:block;margin-bottom:10px}.ydd-tabs{display:block;margin:5px 0;padding:0 5px;height:18px;border-bottom:1px solid}.ydd-tab{display:block;float:left;height:18px;margin:0 5px -1px 0;padding:0 4px;line-height:18px;border:1px solid;border-bottom:none}.ydd-trans-container{display:block;line-height:160%}.ydd-trans-container a{text-decoration:none;}#yddBottom{position:absolute;bottom:0;left:0;width:100%;height:22px;line-height:22px;overflow:hidden;background-position:left -22px}.ydd-padding010{padding:0 10px}#yddWrapper{color:#252525;z-index:10001;background:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);}#yddContainer{background:#fff;border-color:#4b7598}#yddTopBorderlr{border-color:#f0f8fc}#yddWrapper .ydd-sp{background-image:url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)}#yddWrapper a,#yddWrapper a:hover,#yddWrapper a:visited{color:#50799b}#yddWrapper .ydd-tabs{color:#959595}.ydd-tabs,.ydd-tab{background:#fff;border-color:#d5e7f3}#yddBottom{color:#363636}#yddWrapper{min-width:250px;max-width:400px;}</style></html>

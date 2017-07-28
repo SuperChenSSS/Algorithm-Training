@@ -148,3 +148,16 @@ http://blog.csdn.net/Janis_z/article/details/52937631?locationNum=6&fps=1
 8、计算几何
 http://www.cnblogs.com/kuangbin/category/410309.html
 HIT-ACM计算几何模板
+
+【计算几何-参考资料】
+1、计算几何
+http://www.cnblogs.com/kuangbin/category/410309.html
+HIT-ACM计算几何模板
+
+【其他-参考资料】
+2、动态规划
+http://blog.csdn.net/baidu_28312631/article/details/47418773
+http://blog.csdn.net/scythe666/article/details/50921628
+
+3、莫队算法
+http://blog.csdn.net/hnshhslsh/article/details/50582926

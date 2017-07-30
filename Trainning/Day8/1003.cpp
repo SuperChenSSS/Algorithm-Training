@@ -1,42 +1,56 @@
-#include<iostream>
-#include<string>
-#include<cmath>
-#include<cstring>
-#include<algorithm>
+//nupt2017team09
+#include <stdio.h>
+#include <algorithm>
+#include <fstream>
 using namespace std;
-const int maxn = 1e5;
-const int MOD = (1e9+7);
+int a[250010],b[250010],c[250010];
 int main()
 {
-	int n,ai[maxn],bi[maxn];
-	while(cin>>n)
+	//ifstream fin("1.txt");
+	int n,max1,i;
+
+	while(scanf("%d",&n)!=EOF)
 	{
-		int next = 0,index = 0;
-		for(int i=0;i<n;i++)
-			cin>>ai[i];
-		for(int i=0;i<n;i++)
-			cin>>bi[i];
-		sort(bi,bi+n);
-		int left = 0,maxm = 0;
-		for(int i=n+1;i<=2*n-1;i++)
-		{
-			next = bi[index++];
-			for(int j=next; j<n+next; j++)
-			{
-				left = ai[j] - j - 1;
-				if(maxm<left)
-				{
-					maxm = left;
-					//cout << left << " " ;
-				}
-			}
-			ai[n+next] = maxm;
-			next++;
-		}
-		int sum = 0;
-		for(int i=n;i<2*n;i++)
-			sum += ai[i];
-		cout<<sum<<"\n";
+	long long ans=0;
+	//fin>>n;
+	for(i=1;i<=n;i++)
+	{
+		scanf("%d",&a[i]);
+		//fin>>a[i];
+		a[i]=a[i]-i;
+	}
+	for(i=1;i<=n;i++)
+	{
+		scanf("%d",&b[i]);
+		//fin>>b[i];
+	}
+	sort(b+1,b+n+1);
+	max1=0;
+	for(i=b[1];i<=n;i++)
+	{
+		if(a[i]>max1)max1=a[i];
+	}
+	ans=ans+max1;
+	max1=max1-n-1;
+	/*for(i=1;i<=n;i++)
+	printf("%d ",a[i]);
+	printf("\n");*/
+	for(i=n;i>=1;i--)
+	{
+		if(a[i]>max1)max1=a[i];
+		c[i]=max1;
+	}
+
+	/*printf("%d ",max1);
+	for(i=1;i<=n;i++)
+	printf("%d ",c[i]);
+	printf("\n");*/
+	for(i=2;i<=n;i++)
+	{
+		ans=ans+(long long)c[b[i]];
+		ans=ans%(long long)(1e9+7);
+	}
+	printf("%lld\n",ans);
 	}
 	return 0;
 }

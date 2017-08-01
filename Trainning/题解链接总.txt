@@ -372,3 +372,24 @@ O - Area
 知识点：求多边形面积等
 http://www.cnblogs.com/lv-2012/archive/2012/12/01/2797264.html
 
+Summer 2017 Team Training 1
+
+A-zoj 3878 Convert QWERTY to Dvorak 暴力 http://blog.csdn.net/loy_184548/article/details/50592408
+
+B-codeforces 765E Tree Folding 拓扑排序 http://blog.csdn.net/hjt_fathomless/article/details/56013633
+
+C-Gym 101063K Dire, Dire Docks 构造
+
+D-hdu 5875 Function 二分+rmq http://blog.csdn.net/miracle_ma/article/details/52504922
+
+E-poj 3244 Difference between Triplets 数学公式推导 http://blog.csdn.net/acdreamers/article/details/12236319
+
+F-hdu 5724 Chess 博弈+sg函数 http://blog.csdn.net/Danliwoo/article/details/51968789
+
+G-gym 101156L Super 2048 模拟
+
+H-hdu 6031Innumerable Ancestors 二分+lca http://blog.csdn.net/oranges_c/article/details/71698555
+
+I-hdu 1538 A Puzzle for Pirates 经典的海盗分金推理 http://blog.csdn.net/acm_cxlove/article/details/7853916
+
+J-hdu 5791 Two dp http://blog.csdn.net/s_black/article/details/52102668

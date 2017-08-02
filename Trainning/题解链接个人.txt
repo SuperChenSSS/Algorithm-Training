@@ -372,57 +372,22 @@ O - Area
 知识点：求多边形面积等
 http://www.cnblogs.com/lv-2012/archive/2012/12/01/2797264.html
 
-Summer 2017 Team Training 1
-
-A-zoj 3878 Convert QWERTY to Dvorak 暴力 http://blog.csdn.net/loy_184548/article/details/50592408
-
-B-codeforces 765E Tree Folding 拓扑排序 http://blog.csdn.net/hjt_fathomless/article/details/56013633
-
-C-Gym 101063K Dire, Dire Docks 构造
-
-D-hdu 5875 Function 二分+rmq http://blog.csdn.net/miracle_ma/article/details/52504922
-
-E-poj 3244 Difference between Triplets 数学公式推导 http://blog.csdn.net/acdreamers/article/details/12236319
-
-F-hdu 5724 Chess 博弈+sg函数 http://blog.csdn.net/Danliwoo/article/details/51968789
-
-G-gym 101156L Super 2048 模拟
-
-H-hdu 6031Innumerable Ancestors 二分+lca http://blog.csdn.net/oranges_c/article/details/71698555
-
-I-hdu 1538 A Puzzle for Pirates 经典的海盗分金推理 http://blog.csdn.net/acm_cxlove/article/details/7853916
-
-J-hdu 5791 Two dp http://blog.csdn.net/s_black/article/details/52102668
-
-Summer 2017 Team Training 2 题解链接
-
-A.Coins 贪心
-http://www.cnblogs.com/autsky-jadek/p/7226706.html?utm_source=itdadao&utm_medium=referral
-
-B.Business Cycle 贪心、二分
-http://www.cnblogs.com/shimu/p/5948176.html
-
-C.Triangle Formation 水题
-http://blog.csdn.net/code12hour/article/details/51990060
-
-D.Powerful array 莫队算法
-http://blog.csdn.net/zearot/article/details/50835130 
-
-E.Profact 暴搜、剪枝（STL）
-http://blog.csdn.net/lmhacm/article/details/61416851
-
-F.Kevin's Problem 组合数学
-http://mcginn.lofter.com/post/1d50332c_7f59909
-
-G.Sequence Value Dp
-https://media.hihocoder.com/contests/challenge29/sol.pdf
-http://blog.csdn.net/werkeytom_ftd/article/details/73740771 
-
-H.Snakes capturing the Mongoose Cities 树形dp
-https://discuss.codechef.com/questions/100120/captciti-editorial
-
-I.Robot Racing
-http://blog.csdn.net/KEYboarderQQ/article/details/57135492 
-
-J.codechef SNGRAPH 简单图论
-https://discuss.codechef.com/questions/99946/sngraph-editorial
+Summer 2017 Individual Training 1 题解链接
+A-hdu 2095 find your present(2) 异或 
+http://blog.csdn.net/dgq8211/article/details/7455722
+B-hdu 4869 Turn the pokers 组合数 
+http://blog.csdn.net/dyx404514/article/details/38239155
+C-hdu 5592 ZYB's Premutation 线段树或树状数组 
+http://blog.csdn.net/lljjccsskk/article/details/50215631
+D-hdu 5636 Shortest Path Floyd+暴力 
+http://blog.csdn.net/liuke19950717/article/details/50923293
+E-hdu 3038 How Many Answers Are Wrong 并查集 
+http://blog.csdn.net/backforward/article/details/51889011
+F-poj 3318 Matrix Multiplication 随机化 http://blog.csdn.net/sr_19930829/article/details/38236769 
+G-Codeforces 739B Alyona and a tree dfs + 二分 
+http://blog.csdn.net/harlow_cheng/article/details/53687480
+H-csu 1473 递增子序列 离散化+树状数组
+I-hdu 5742 It's All In The Mind 贪心 
+http://blog.csdn.net/helloiamclh/article/details/52002580
+J-UVA 11210 Chinese Mahjong 暴力搜索 
+http://blog.csdn.net/keshuai19940722/article/details/10034505

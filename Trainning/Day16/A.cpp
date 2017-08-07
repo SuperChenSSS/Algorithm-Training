@@ -24,6 +24,13 @@ int gcd(int a,int b)
 {
 	return b==0?a:gcd(b,a%b);
 }
+int ngcd(int *a,int n)
+{
+	if(n==1)
+		return *a;
+	else
+		return ngcd(a[n-1],ngcd(a, n-1));
+}
 int main()
 {
 	ll t,n,ans,kas = 0;

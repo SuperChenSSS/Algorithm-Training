@@ -52,3 +52,35 @@ http://blog.csdn.net/KEYboarderQQ/article/details/57135492
 
 J.codechef SNGRAPH 简单图论
 https://discuss.codechef.com/questions/99946/sngraph-editorial
+
+Summer 2017 Team Training 3 题解链接
+
+A.OO's Sequence  约数枚举
+http://blog.csdn.net/maxichu/article/details/47611819
+
+B.LRU  概率+状态压缩DP
+http://blog.csdn.net/clove_unique/article/details/62233833
+
+C.Devu and Flowers  组合数学+容斥
+http://hzwer.com/3810.html
+
+D.Just a Hook  线段树区间更新
+http://blog.csdn.net/libin56842/article/details/13511181 
+
+E.The Frog's Games  二分+贪心
+http://blog.csdn.net/non_cease/article/details/6769814
+
+F.A Simple Math Problem  矩阵快速幂
+http://blog.csdn.net/efreet9539/article/details/24538071
+
+G.翻纸牌游戏  DFS
+http://blog.csdn.net/libin56842/article/details/14104989
+
+H.Unlucky Strings  快速幂+KMP
+http://blog.csdn.net/u014664226/article/details/49110349
+
+I.Get Out!  计算几何
+http://blog.csdn.net/diary_yang/article/details/13880547
+
+J.Cracking' RSA  高斯消元
+http://blog.csdn.net/ok_again/article/details/13776037

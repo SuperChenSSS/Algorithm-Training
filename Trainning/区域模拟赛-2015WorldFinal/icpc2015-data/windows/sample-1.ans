@@ -1,0 +1,6 @@
+Command 4: RESIZE - window does not fit
+Command 7: CLOSE - no window at given position
+Command 9: MOVE - moved 50 instead of 100
+2 window(s):
+90 0 15 15
+115 50 10 10

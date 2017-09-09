@@ -6,31 +6,29 @@
 #include <vector>  
 #include <stack>    
 #include <cstdlib>  
-#include <cmath>  
-#include <set>  
-#include <list>  
-#include <deque>  
+#include <cmath> 
 #include <map>  
 #include <queue> 
+#include <time.h>
 using namespace std;  
 typedef long long ll;  
 const double PI = acos(-1.0);  
 const double eps = 1e-6;  
 const int INF = 1000000000;  
-const int maxn = 1e6;
-const int mod = (1e9+7); 
-//求n!的10进制长度：斯特林公式
-//n!=sqrt(2*pi*n)*(n/e)^n
-//求n的长度:res = (int)(log10(2*pi*n)/2 + n*log10(n/e)) + 1;
+const int maxn = 1e2;
+const int mod = (1e9+7);
+
+
 int main()
 {
+	freopen("2.txt","w+",stdout);
 	ios::sync_with_stdio(false);
-	ll n,res;
-	double e = exp(1);
-	while(cin>>n)
+	srand(time(NULL));
+	printf("1 %d\n",maxn);
+	for(int i = 0;i<=maxn;++i)
 	{
-		res = (ll)(log10(2*PI*n)/2+n*log10(n/e)) + 1;
-		cout<<res<<endl;
+		printf("%d ",rand()%(201));
 	}
+	printf("\n");
 	return 0;
 }

@@ -19,18 +19,23 @@ const double eps = 1e-6;
 const int INF = 1000000000;  
 const int maxn = 1e6;
 const int mod = (1e9+7); 
-//求n!的10进制长度：斯特林公式
-//n!=sqrt(2*pi*n)*(n/e)^n
-//求n的长度:res = (int)(log10(2*pi*n)/2 + n*log10(n/e)) + 1;
+ll arr[maxn];
+ll dp[maxn];
 int main()
 {
+	//freopen("1081.txt","r",stdin);
 	ios::sync_with_stdio(false);
-	ll n,res;
-	double e = exp(1);
-	while(cin>>n)
+	ll n,q,ival,lval,sum;
+	cin>>n;
+	for(int i=1;i<=n;i++){
+		cin>>arr[i];
+		dp[i] = dp[i-1] + arr[i];
+	}
+	cin>>q;
+	while(q--)
 	{
-		res = (ll)(log10(2*PI*n)/2+n*log10(n/e)) + 1;
-		cout<<res<<endl;
+		cin>>ival>>lval;
+		cout<<dp[lval+ival-1] - dp[ival-1]<<endl;
 	}
 	return 0;
 }

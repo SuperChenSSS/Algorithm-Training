@@ -6,10 +6,7 @@
 #include <vector>  
 #include <stack>    
 #include <cstdlib>  
-#include <cmath>  
-#include <set>  
-#include <list>  
-#include <deque>  
+#include <cmath> 
 #include <map>  
 #include <queue> 
 using namespace std;  
@@ -19,18 +16,29 @@ const double eps = 1e-6;
 const int INF = 1000000000;  
 const int maxn = 1e6;
 const int mod = (1e9+7); 
-//求n!的10进制长度：斯特林公式
-//n!=sqrt(2*pi*n)*(n/e)^n
-//求n的长度:res = (int)(log10(2*pi*n)/2 + n*log10(n/e)) + 1;
+bool g1[60][60],g2[60][60];
+int monkey[60],banana[60],place[60];
 int main()
 {
 	ios::sync_with_stdio(false);
-	ll n,res;
-	double e = exp(1);
-	while(cin>>n)
+	int t;
+	cin>>t;
+	while(t--)
 	{
-		res = (ll)(log10(2*PI*n)/2+n*log10(n/e)) + 1;
-		cout<<res<<endl;
+		memset(g1,false,sizeof(g1));
+		memset(g2,false,sizeof(g2));
+		int n,m;
+		cin>>n>>m;
+		for(int i=0;i<n;i++)
+		{
+			cin>>monkey[i]>>banana[i];
+			g1[monkey[i]][banana[i]] = true;
+		}
+		for(int i=0;i<m;i++)
+		{
+			cin>>banana[i]>>place[i];
+			g2[banana[i]][place[i]] = true;
+		}
 	}
 	return 0;
 }

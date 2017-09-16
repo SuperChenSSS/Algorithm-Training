@@ -24,7 +24,7 @@ const int mod = (1e9+7);
 int main()
 {
 	ios::sync_with_stdio(false);
-	int t,a,b,huangjin;
+	ll t,a,b,huangjin;
 	cin>>t;
 	while(t--)
 	{

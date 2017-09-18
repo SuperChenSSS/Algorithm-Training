@@ -62,14 +62,11 @@ int main()
 		int p,q,k;
 		ll zi = 0,mu = 0;
 		cin>>p>>q>>k;
-		mu = quick_mod(p,k);
-		for(int i=0;i<=k;i+=2)
-		{
-			Zi[i] = Lucas(k,i) * quick_mod(q,i) * quick_mod(p-q,k-i);
-			//cout<<Zi[i]<<endl;
-			zi += Zi[i];
-		}
-		cout<<zi*quick_mod(mu,mod-2)<<endl;
+		ll ans = (p-2*q) * quick_mod(p, mod-2) % mod;//利用费马小定理求（【(p-2q)/p】^n+1）/2
+		ans = quick_mod(ans, k);
+		ans++;
+		ans = (ans % mod + mod) % mod;
+		cout<<ans<<endl;
 	}
 	return 0;
 }

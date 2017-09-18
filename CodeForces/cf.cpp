@@ -16,30 +16,33 @@ const double eps = 1e-6;
 const int INF = 1000000000;  
 const int maxn = 1e6;
 const int mod = (1e9+7); 
-int dp[maxn];//dp[i]表示递增数量i的最小值
-int a[maxn];
+vector<int> vec;
 int main()
 {
 	ios::sync_with_stdio(false);
-	int n,len = 1;
+	int n,tmp;
 	cin>>n;
-	for(int i=1;i<=n;i++)
-		cin>>a[i];
-	dp[len] = a[1];
-	for(int i=2;i<=n;i++)
+	for(int i=0;i<n;i++)
 	{
-		if(a[i]>dp[len])
-			dp[++len] = a[i];
-		else
-		{
-			int pos = lower_bound(dp+1,dp+len,a[i]) - dp;
-			//在dp[]找第一个>=a[i]下标
-			dp[pos] = a[i];
-		}
+		cin>>tmp;
+		vec.push_back(tmp);
 	}
-	for(int i=1;i<=len;i++)
-		cout<<dp[i]<<" ";
-	cout<<endl;
-	//cout<<len<<endl;
+	while(!vec.empty())
+	{
+		tmp = vec[0];
+		cout<<vec[0];
+		vec.erase(vec.begin());
+		for(int i=0;i<vec.size();i++)
+		{
+			if(vec[i]>=tmp)
+			{
+				cout<<" "<<vec[i];
+				tmp = vec[i];
+				vec.erase(vec.begin()+i);
+				i--;
+			}
+		}
+		cout<<endl;
+	}
 	return 0;
 }

@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <iostream>
 #include <string.h>
+#include <cstring>
 #include <queue>
 using namespace std;
 const int maxn = 1e6;
@@ -22,9 +23,9 @@ struct Trie
 		L = 0;
 		root = newnode();
 	}
-	void insert(char buf[])
+	void insert(string buf)
 	{
-		int len = strlen(buf);
+		int len = buf.size();
 		int now = root;
 		for(int i = 0; i < len; i++)
 		{
@@ -60,9 +61,9 @@ struct Trie
 				}
 		}
 	}
-	int query(char buf[])
+	int query(string buf)
 	{
-		int len = strlen(buf);
+		int len = buf.size();
 		int now = root;
 		int res = 0;
 		for(int i = 0; i < len; i++)
@@ -75,47 +76,52 @@ struct Trie
 				end[temp] = 0;
 				temp = fail[temp];
 			}
-			if(res==n)	return res;
 		}
 		return res;
 	}
 };
-char buf[1000010],zhu[maxn];
+string buf[100000];
+int len[100000];
 Trie ac;
-int check(int mlen)
-{
-	for(int i=1;i<=n;i++)
-		if(len[i]==mlen)
-		{
-			if(ac.query(zhu)==n)
-				return i;
-			else return 0;
-		}
-	return 0;
-}
 int main()
 {
-	//freopen("2.txt", "r", stdin);
+  //freopen("2.txt", "r", stdin);
+  ios::sync_with_stdio(false);
 	int T;
-	scanf("%d",&T);
-	while( T-- )
+	cin >> T;
+	while(T--)
 	{
-		int maxlen = 0,flag1 = 0;
-		scanf("%d",&n);
+		int maxlen = 0;
+		cin >> n;
 		ac.init();
 		for(int i = 0; i < n; i++)
 		{
-			scanf("%s",buf);
-			ac.insert(buf);
-			if(maxlen<strlen(buf))
+			cin>>buf[i];
+      		len[i]=buf[i].size();
+			ac.insert(buf[i]);
+			if(maxlen<len[i])
 			{
-				maxlen = strlen(buf);
-				//memset(zhu,0,sizeof(zhu));
-				strcpy(zhu,buf);
+				maxlen =len[i];
 			}
 		}
 		ac.build();
-		check(n);
+    for(int i=0;i<n;i++)
+    {
+      if(len[i]==maxlen)
+      {
+        if(ac.query(buf[i])==n)
+        {
+          cout << buf[i] << endl;
+    //      printf("%s\n",buf[i]);
+          break;
+        }
+        else
+        {
+          cout << "No" << endl;
+          break;
+        }
+      }
+    }
 	}
 	return 0;
 }

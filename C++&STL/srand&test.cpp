@@ -2,6 +2,7 @@
 #include<vector>
 #include<cstdlib>
 #include<cassert>
+#include<algorithm>
 using namespace std;
 
 void fill_random_int(vector<int>& v,int cnt){

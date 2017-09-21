@@ -99,29 +99,25 @@ int main()
 			cin>>buf[i];
       		len[i]=buf[i].size();
 			ac.insert(buf[i]);
-			if(maxlen<len[i])
-			{
-				maxlen =len[i];
-			}
+			maxlen = max(maxlen,len[i]);
 		}
 		ac.build();
-    for(int i=0;i<n;i++)
-    {
-      if(len[i]==maxlen)
-      {
-        if(ac.query(buf[i])==n)
-        {
-          cout << buf[i] << endl;
-    //      printf("%s\n",buf[i]);
-          break;
-        }
-        else
-        {
-          cout << "No" << endl;
-          break;
-        }
-      }
-    }
+	    for(int i=0;i<n;i++)
+	    {
+	      if(len[i]==maxlen)
+	      {
+	        if(ac.query(buf[i])==n)
+	        {
+	          cout << buf[i] << endl;
+	          break;
+	        }
+	        else
+	        {
+	          cout << "No" << endl;
+	          break;
+	        }
+	      }
+	    }
 	}
 	return 0;
 }

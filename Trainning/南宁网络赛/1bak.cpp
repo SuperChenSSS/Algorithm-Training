@@ -23,7 +23,7 @@ struct arr
 int xiao[maxn];
 bool cmp(struct arr a,struct arr b)
 {
-	if(a.tob.to)
+	if(a.to)
 	return false;
 }
 int main()

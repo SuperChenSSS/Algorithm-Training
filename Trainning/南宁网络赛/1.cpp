@@ -62,7 +62,7 @@ int main()
 					}
 					else
 					{
-						arr[i].xiao = arr[i].xiao -
+						arr[i].xiao = arr[i].xiao - arr[i].ren;
 					}
 					arr[i].xiao += arr[j].ren;
 					wei = arr[j].to;

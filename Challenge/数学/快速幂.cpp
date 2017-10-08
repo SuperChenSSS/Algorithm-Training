@@ -35,61 +35,45 @@ int numprime(int n)
 	}
 	return p;
 }
-//判定一个数是否是素数
-bool is_prime(int n)
+ll pow_mod(ll x,ll n,ll mod)
 {
-	for(int i=2;i*i<=n;i++)
+	ll res = 1;
+	while(n>0)
 	{
-		if(n % i == 0)
-			return false;
-		return n != 1;
+		if(n & 1)
+			res = res * x % mod;//如果二进制最低位为1，则乘上x^(2^i)
+		x = x * x % mod;//将x平方
+		n >>= 1;
 	}
-}
-//约数枚举O(sqrt(n))
-vector<int> divisor(int n)
-{
-	vector<int> res;
-	for(int i=1;i*i<=n;i++)
-	{
-		if(n % i == 0)
-		{
-			res.push_back(i);
-			if(i!=n/i)
-				res.push_back(n/i);
-		}
-	}
-	return res;
-}
-//整数分解O(sqrt(n))
-map<int,int> prime_factor(int n)
-{
-	map<int,int> res;
-	for(int i=2;i*i<=n;i++)
-	{
-		while(n % i == 0)
-		{
-			++res[i];
-			n /= i;
-		}
-	}
-	if(n!=1)
-		res[n] = 1;
 	return res;
 }
 int main()
 {
 	//freopen("1.txt","r",stdin);
 	ios::sync_with_stdio(false);
+	numprime(maxn);
 	int n;
-	while(cin>>n)
+	while(cin>>n&&n)
 	{
-		memset(isprime,0,sizeof(isprime));
-		memset(prime,0,sizeof(prime));
-		if(is_prime(n))
+		bool flag = true;
+		if(!isprime[n])//素数筛
+		{
+			for(int i=2;i<n;i++)
+			{
+				int tmp = pow_mod(i, n, n);
+				if(tmp!=i)//如果不满足条件
+				{
+					flag = false;
+					break;
+				}
+			}
+		}
+		else
+			flag = false;
+		if(flag)
 			cout<<"YES\n";
 		else
 			cout<<"NO\n";
-		cout<<"Num:"<<numprime(n)<<endl;
 	}
 	return 0;
 }

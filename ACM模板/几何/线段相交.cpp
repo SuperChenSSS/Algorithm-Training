@@ -35,7 +35,7 @@ int sreach(Point a,Point b,Point c,Point d)
 	p[2]=(d.x-c.x)*(d.y-a.y)-(d.y-c.y)*(d.x-a.x);  
 	p[3]=(d.x-c.x)*(d.y-b.y)-(d.y-c.y)*(d.x-b.x);  
 	if ((p[0]*p[1]<=0)&&(p[2]*p[3]<=0))  
-	return true;  
+		return true;  
 	return false;  
 }  
 int main()

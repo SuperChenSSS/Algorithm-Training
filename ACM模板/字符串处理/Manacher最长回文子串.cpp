@@ -36,14 +36,6 @@ void Manacher(char s[],int len)
 	}
 }
 
-/*
-* abaaba
-* i:
-0 1 2 3 4 5 6 7 8 9 10 11 12 13
-* Ma[i]: $ # a # b # a # a $ b
-* Mp[i]: 1 1 2 1 4 1 2 7 2 1 4
-*/
-
 char s[MAXN];
 int main()
 {

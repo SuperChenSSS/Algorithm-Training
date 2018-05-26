@@ -47,6 +47,6 @@ int main()
 	{
 		x += n;
 	}
-	cout<<x<<endl;
+	cout<<x<<y<<endl;
 	return 0;
 }

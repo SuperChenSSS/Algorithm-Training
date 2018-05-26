@@ -1,4 +1,3 @@
-//TDteam01
 #include <cstdio>  
 #include <cstring>  
 #include <algorithm>  
@@ -22,6 +21,7 @@ const double eps = 1e-6;
 const int INF = 1000000000;  
 const int maxn = 1e6;
 const int mod = (1e9+7); 
+int scc;
 struct node
 {
 	int v,next;
@@ -52,6 +52,7 @@ void tarjan(int x)//代表几个点在处理，递归的是点
 	}
 	if(LOW[x]==DFN[x])//发现是整个强连通分量子树的最小根
 	{
+		scc++;
 		do{
 			printf("%d ",stack[ind]);
 			visit[stack[ind]] = 0;
@@ -75,5 +76,6 @@ int main()
 	for(int i=1;i<=n;i++)
 		if(!DFN[i])
 			tarjan(i);//当这个点没有访问过，就从此点开始。防止图没走完
+	cout<<scc<<std::endl;
 	return 0;
 }

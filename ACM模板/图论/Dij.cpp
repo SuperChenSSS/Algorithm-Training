@@ -75,7 +75,6 @@ int main()
 	{
 		cin>>from>>to>>len;
 		addedge(from, to, len);
-		//cout<<"O";
 	}
 	Dij(n,1);
 	for(int i=1;i<n-1;i++)

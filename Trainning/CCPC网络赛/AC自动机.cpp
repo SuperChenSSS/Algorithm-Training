@@ -86,7 +86,7 @@ int main()
 	scanf("%d",&T);
 	while( T-- )
 	{
-		//scanf("%d",&n);
+		scanf("%d",&n);
 		ac.init();
 		scanf("%s",buf);
 		ac.insert(buf);

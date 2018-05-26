@@ -79,6 +79,7 @@ int bfs(int n,int k)
 				return next.step;
 		}
 	}
+	return 0;
 }
 int main()
 {

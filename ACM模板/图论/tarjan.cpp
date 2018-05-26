@@ -91,5 +91,18 @@ void init()
 int main()
 {
 	ios::sync_with_stdio(false);
+	int n,m,x,y;
+	while(cin>>n>>m)
+	{
+		init();
+		for(int i=1;i<=m;i++)
+		{
+			cin>>x>>y;
+			addedge(x, y);
+		}
+		solve(n);
+		int ans = scc;
+		cout<<ans<<endl;
+	}
 	return 0;
 }
